@@ -1,3 +1,11 @@
+# Spring-data-jpa
+
+> 实体类中必须要有无参构造器
+
+![](https://i.loli.net/2018/07/24/5b5744fbf0bf8.jpg)
+
+![](https://i.loli.net/2018/07/24/5b574537bb4a3.jpg)
+
 # 表单验证
 
 > 使用spring-data-jpa的表单验证需要先导入如下依赖
@@ -251,4 +259,8 @@ public class ExceptionHandle {
     }
 }
 ```
+
+# 单元测试
+
+## 对service进行测试
 
