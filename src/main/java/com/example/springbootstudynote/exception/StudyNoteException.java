@@ -13,9 +13,17 @@ public class StudyNoteException extends RuntimeException{
      */
     private Integer code;
 
+    public StudyNoteException() {
+    }
+
     public StudyNoteException(ResultEnum resultEnum) {
         super(resultEnum.getMsg());
         this.code = resultEnum.getCode();
+    }
+
+    public StudyNoteException(String message, Integer code) {
+        super(message);
+        this.code = code;
     }
 
     public Integer getCode() {
