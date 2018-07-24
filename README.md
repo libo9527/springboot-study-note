@@ -190,9 +190,17 @@ public class StudyNoteException extends RuntimeException{
      */
     private Integer code;
 
+    public StudyNoteException() {
+    }
+
     public StudyNoteException(ResultEnum resultEnum) {
         super(resultEnum.getMsg());
         this.code = resultEnum.getCode();
+    }
+
+    public StudyNoteException(String message, Integer code) {
+        super(message);
+        this.code = code;
     }
 
     public Integer getCode() {
@@ -240,32 +248,6 @@ public class ExceptionHandle {
             logger.error("【系统异常】{}", e);  // 记录异常
             return ResultUtil.error(ResultEnum.UNKONW_ERROR);
         }
-    }
-}
-```
-
-```java
-/**
- * 自定义异常
- *
- * @author Zhen
- * @create 2018-05-24 16:56
- **/
-public class GameBoxException extends RuntimeException {
-
-    private Integer code;
-
-    public GameBoxException(Integer code, String msg) {
-        super(msg);
-        this.code = code;
-    }
-
-    public Integer getCode() {
-        return code;
-    }
-
-    public void setCode(Integer code) {
-        this.code = code;
     }
 }
 ```
